@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/title_tv"
+    android:layout_marginTop="50dp"
+    android:textSize="25sp"
+    android:gravity="center"
+    android:textColor="@color/white"
+    android:text="@string/take_a_pomodoro"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        android:hint="@string/set_timer"
+        app:hintTextColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        android:id="@+id/set_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColor="@color/white"
+            android:id="@+id/set_time_et"
+            android:inputType="number"
+            android:backgroundTint="@color/light_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/set_btn"
+        app:backgroundTint="@color/btn_red"
+        android:background="@drawable/rounded_btn"
+        android:text="Set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/set_time_layout"
+        app:layout_constraintStart_toStartOf="@id/set_time_layout"
+        app:layout_constraintEnd_toEndOf="@id/set_time_layout"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <TextView
+       android:layout_marginTop="80dp"
+        android:id="@+id/timer_tv"
+        android:textSize="45sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/time_25_00"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_btn"
+       app:backgroundTint="@color/btn_red"
+        android:id="@+id/btn"
+        android:text="@string/start"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="@id/timer_tv"
+        app:layout_constraintStart_toStartOf="@id/timer_tv"
+        app:layout_constraintTop_toBottomOf="@id/timer_tv"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/reset_tv"
+        android:letterSpacing=".12"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/btn"
+        app:layout_constraintStart_toStartOf="@id/btn"
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        android:textColor="@color/white"
+        android:text="@string/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ProgressBar
+
+        android:id="@+id/prog_bar"
+        android:progress="100"
+        style="?android:attr/progressBarStyle"
+        android:progressDrawable="@drawable/progress_bar"
+        android:indeterminateOnly="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/timer_tv"
+        app:layout_constraintTop_toTopOf="@id/timer_tv"
+        android:layout_width="330dp"
+        android:layout_height="330dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

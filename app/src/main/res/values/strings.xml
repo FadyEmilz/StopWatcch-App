@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Stop Watch</string>
+    <string name="reset"><u>Reset</u></string>
+    <string name="time_25_00">25:00</string>
+    <string name="take_a_pomodoro">Take a Pomodoro ....</string>
+    <string name="start">Start</string>
+    <string name="keep">Keep Going ....</string>
+    <string name="stop">Stop</string>
+    <string name="paused">Paused</string>
+    <string name="set_timer">Set Timer</string>
+</resources>
